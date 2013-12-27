@@ -11,4 +11,3 @@ Other things to consider adding
 	put it online
 	link it with an app... much harder
 		android app... not even written in Objective-C...
-change. 
