@@ -3,3 +3,6 @@
 2013-12-27.00:19:22	DEBUG:	getting menu input
 2013-12-27.00:19:24	DEBUG:	input=3. Calling exitInt()
 2013-12-27.00:19:24	DEBUG:	exiting Interface
+2013-12-27.02:06:36	DEBUG:	Booting up the interface
+2013-12-27.02:06:36	DEBUG:	printing menu
+2013-12-27.02:06:36	DEBUG:	getting menu input
