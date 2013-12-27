@@ -1,5 +1,0 @@
-DATE HERE	DEBUG:	did I make a mistake?
-DATE HERE	ERROR:	There was an error and I'm recording it here
-DATE HERE	DEBUG:	did I make a mistake?
-DATE HERE	ERROR:	There was an error and I'm recording it here
-DATE HERE	DEBUG:	starting a counter
