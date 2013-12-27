@@ -1,9 +1,3 @@
-This program currently has 
-	Command line interface (non-gui)
-	Note object that links the program to text files
-	
-I'm in the process of making
-
 I want to add
 	Folders? Some semblance of organization? Color coding?
 		keywords or tags (samething as Taggit for reddit)
