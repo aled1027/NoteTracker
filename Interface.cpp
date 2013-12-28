@@ -23,7 +23,6 @@ void Interface::printMenu() {
     cout << "Welcome to notetaker. Notetaker will encrypt and store your text files in a database." << endl;
     cout << "How would you like to proceed?" << endl;
     // print menu and figure out what the user wants to do. 
-    int inp;
     bool run = true;
     while (run) {
 		log.writeDebug("printing menu");
@@ -87,7 +86,7 @@ void Interface::gotoDB() {
 			inp = atoi(input.c_str());
 			if ((inp > -1) && (inp < (counter+1))) {
 				unsigned pos = dbText[inp].find(";");
-				openFile(dbText[inp].substr(0, pos), inp);
+				openFile(dbText[inp].substr(0, pos));
 			}
 			run = false;
 		} catch(exception &e) {
@@ -99,13 +98,7 @@ void Interface::gotoDB() {
 void Interface::openFile(string path) {
 	Note * file = new Note(path);
 	fileMenu(file);
-	updateDB(file, 
-}
-
-void Interface::updateDB(Note *file, int line_number) {
-	log.writeDebug("Updating database on line " + line_number + "and file " + file->getPath());
-	//now update the database
-
+//	updateDB(file, 
 }
 
 void Interface::fileMenu(Note *file) {

@@ -1,3 +1,6 @@
+- Add folders so it doesn't look like a bunch of random files
+- ^^ will require fixing makefile
+
 I want to add
 	Folders? Some semblance of organization? Color coding?
 		keywords or tags (samething as Taggit for reddit)
@@ -11,4 +14,3 @@ Other things to consider adding
 	put it online
 	link it with an app... much harder
 		android app... not even written in Objective-C...
-+
