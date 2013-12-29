@@ -104,9 +104,8 @@ void Interface::gotoDB() {
 			if ((inp > -1) && (inp < (counter+1))) {
 				log.writeDebug("Valid input: " + inp);
 				//open file
-				//FIXING THIS
 				log.writeDebug("About to open " + dbContents[inp][1]);
-				openFile(dbContents[inp][1]);
+				openFile(dbContents[inp][1], dbContents[inp][0]);
 			}
 			else {
 				log.writeError("Invalid input: " + inp);
@@ -118,10 +117,9 @@ void Interface::gotoDB() {
 	}
 }
 
-void Interface::openFile(string path) {
-	Note * file = new Note(path);
+void Interface::openFile(string path, string name) {
+	Note * file = new Note(path, name);
 	fileMenu(file);
-	addtoDB(file);
 }
 
 void Interface::fileMenu(Note *file) {
@@ -167,6 +165,7 @@ void Interface::newFile() {
 	log.writeDebug("Asking for new path for file");
 	cout << "What is the path of the new file?" << endl;
 	string path;
+	string name;
 	while (true) {
 		cin.clear();
 		getline(cin, path);
@@ -176,17 +175,18 @@ void Interface::newFile() {
 			log.writeError("Path wasn't valid");
 			cout << "That path isn't valid. Please enter a new path." << endl;
 		}
-		else break;
+		else {
+			cout << "What is the name of the new file?" << endl;
+			getline(cin, name);
+			break;
+		}
 	}
-	// add to database
-	//FIX HERE
-	// Create a new note with this path
-	Note *file = new Note(path);
+	
+	// Create a new note with this path and work with it. 
+	Note *file = new Note(path, name); // *file is deleted in fileMenu()
 	addtoDB(file);
-	// Now work with this path. 
 	log.writeDebug("finished adding file to db. Going to fileMenu for path");
 	fileMenu(file);
-	delete file;
 	return;
 }
 
@@ -231,12 +231,14 @@ void Interface::exitInt() {
 }
 
 void Interface::addtoDB(Note *file) {
-	log.writeDebug("Updating database");
+	log.writeDebug("Adding to database");
 	string path = file->getPath();
-	string name = "note10"; // file->getPath();
+	// FIX THIS
+	string name = "note10"; // file->getName();
+
 	// I think that this isn't secure, but I don't care. 
-	string query = "INSERT INTO TextFiles (Name, Path, Date) VALUES(" + name + "," + path + "," + db.getCurrentDateTime() + ");";
-	//db.query(query);
-	log.writeDebug("Finished updating database");
+	string query = "INSERT INTO TextFiles (Name,Path,Date) VALUES(\"" + name + "\",\"" + path + "\",\"" + db.getCurrentDateTime() + "\");";
+	db.query(query);
+	log.writeDebug("Finished adding to database");
 	return;
 }

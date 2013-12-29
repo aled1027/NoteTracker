@@ -18,7 +18,7 @@ public:
     void printMenu();
     void gotoDB();
     void gotoNewFile();
-	void openFile(string path);
+	void openFile(string,string);
     void exitInt();
 	void fileMenu(Note *file);
 	void newFile();

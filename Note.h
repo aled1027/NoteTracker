@@ -11,20 +11,21 @@ using namespace std;
 class Note {
 public:
 	Note();
-    Note(string path);
+    Note(string, string);
     ~Note();
 
     bool open(std::string path); //return false if can't open
     vector<string> read();
     void close();
-    void edit();
 	string getPath();
+	string getName();
 	void reopen();
 	void addToEnd(string str);
-	void updateLine(string, int); // unfinished
+	
 private:
     fstream note;
-	string file_path;
+	string path;
+	string name;
 };
 
 #endif

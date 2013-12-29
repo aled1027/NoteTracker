@@ -5,11 +5,14 @@ using namespace std;
 Note::Note() {
 }
 
-Note::Note(string path) {
-	file_path = path;
+Note::Note(string pathX, string nameX) {
+	path = pathX;
+	name = nameX;
 	open(path);
 }
-Note::~Note() {}
+Note::~Note() {
+	close();
+}
 
 bool Note::open(string path) {
 	//works for both relative and absolute paths
@@ -42,13 +45,12 @@ void Note::close() {
 	note.close();
 }
 
-void Note::edit() {
-	// does nothing for now. 
-	return;
+string Note::getPath() {
+	return path;
 }
 
-string Note::getPath() {
-	return file_path;
+string Note::getName() {
+	return name;
 }
 
 void Note::reopen() {
@@ -60,6 +62,3 @@ void Note::addToEnd(string str) {
 	note << str << endl;	
 }
 
-void Note::updateLine(string newline, int lineNumber) {
-	// unfinished
-}
