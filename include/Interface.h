@@ -16,17 +16,18 @@ public:
     Interface(string dbPath);
     ~Interface();
     void printMenu();
-    void gotoDB();
-    void gotoNewFile();
+
+private:
+	Logger log;
+    Database db;
+	void gotoNewFile();
 	void openFile(string,string);
     void exitInt();
 	void fileMenu(Note *file);
 	void newFile();
-	void addtoDB(Note *file);
+	bool addtoDB(Note *file);
 	void practLogs();
-private:
-	Logger log;
-	Database db;
+    void gotoDB();
 	void fileEdit(Note *file);
 	void fileRead(Note *file);
 	void fileEncrypt(Note *file);

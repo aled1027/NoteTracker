@@ -67,9 +67,9 @@ void Interface::gotoDB() {
 	bool run = true;
 	int counter = 0;
 	int inp = -1;
-	string query = "SELECT * FROM TextFiles";
+	string query = "SELECT * FROM TextFiles ORDER BY Date";
 	vector<vector<string> > dbContents = db.query(query);
-	if (dbContents[0][0].find(query) != std::string::npos) {
+	if (dbContents[0][0].find("Error") != std::string::npos) {
 		log.writeError("Error with sqlite3 query: " + query);
 		cout << endl << "Database access error. Returning to main menu." << endl;;
 		printMenu();
@@ -78,7 +78,9 @@ void Interface::gotoDB() {
 	log.writeDebug("Starting loop to print contents of db");
 	vector<vector<string> >::iterator itvvs;	
 	vector<string>::iterator it;
-	for (itvvs = dbContents.begin(); itvvs != dbContents.end(); itvvs++) {
+	cout << "Name\tPath\tDate" << endl;
+	// to list them in order of newest to older, need to go backwards
+	for (itvvs = dbContents.end()-1; itvvs != dbContents.begin()-1; itvvs--) {
 		cout << counter << ": ";
 		for (it = itvvs->begin(); it != itvvs->end(); it++) {
 			cout << (*it) << "\t";
@@ -157,7 +159,6 @@ void Interface::fileMenu(Note *file) {
 			cout << "Invalid input." << endl;
 		}	
 	}
-	delete file;
 	return;
 }
 
@@ -184,7 +185,10 @@ void Interface::newFile() {
 	
 	// Create a new note with this path and work with it. 
 	Note *file = new Note(path, name); // *file is deleted in fileMenu()
-	addtoDB(file);
+	// function terminates if addtoDB fails. Let addtoDB figure out where to take user	
+	if(!addtoDB(file)) { 
+		return;
+	}
 	log.writeDebug("finished adding file to db. Going to fileMenu for path");
 	fileMenu(file);
 	return;
@@ -230,15 +234,38 @@ void Interface::exitInt() {
 	cout << endl << endl;
 }
 
-void Interface::addtoDB(Note *file) {
+bool Interface::addtoDB(Note *file) {
 	log.writeDebug("Adding to database");
 	string path = file->getPath();
 	// FIX THIS
-	string name = "note10"; // file->getName();
+	string name = file->getName();
 
 	// I think that this isn't secure, but I don't care. 
 	string query = "INSERT INTO TextFiles (Name,Path,Date) VALUES(\"" + name + "\",\"" + path + "\",\"" + db.getCurrentDateTime() + "\");";
-	db.query(query);
+	vector<vector<string> > v = db.query(query);
+ 	// true if sqlite3 query had an error
+	if (v.size() > 0) {
+		string error = v[0][0]; //db.query() saved error at v[0][0]
+		log.writeError("Sqlite3 query error: " + error);
+		// error: "column Path is not unique" "column Name is not unique"
+		if (error.find("unique") != std::string::npos) {
+			if (error.find("Path") != std::string::npos) {
+				cout << "The path you entered already exists in the database." << endl;
+				cout << "I will ignore the name you entered and open that note anyway" << endl;
+                cout << endl;
+				return true; // newFile(), which called addtoDB, will open the note
+				// program opens that note
+			} else if (error.find("Name") != std::string::npos) {
+				cout << "The name you entered already exists. Please enter a new name and path" << endl;
+				newFile();
+				return false;
+			}
+		// all other errors
+		} else { 
+			cout << "Error inserting into database. Proceeding without saving to database." << endl;
+			return true;
+		}
+	}
 	log.writeDebug("Finished adding to database");
-	return;
+	return true;
 }

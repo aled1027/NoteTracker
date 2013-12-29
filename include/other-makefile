@@ -1,0 +1,24 @@
+CXXFLAGS =	-O2 -g -Wall -fmessage-length=0
+#List of dependencies...
+
+SRCS =	Database.cpp Logger.cpp Note.cpp Interface.cpp Notetracker.cpp #added
+OBJS =	$(SRCS:.cpp=.o) #added
+MAIN = 	noteTracker
+
+
+LIBS = -Wno-write-strings -lsqlite3
+TARGET = noteTracker		
+$(TARGET):	$(OBJS)
+	$(CXX) -o $(TARGET) $(OBJS) $(LIBS)
+
+all:	$(TARGET)
+
+clean:
+		rm -f $(OBJS) $(TARGET)
+run:	$(TARGET)
+		./$(TARGET)
+
+
+
+
+#OBJS =	Database.o Logger.o Note.o Interface.o noteTracker.o

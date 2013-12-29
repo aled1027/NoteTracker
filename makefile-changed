@@ -1,0 +1,27 @@
+OBJS =	noteTracker.o Note.o Logger.o Database.o Interface.o 
+CXX = g++
+INCLIB = /include 
+LIBS = -Wno-write-strings -lsqlite3
+CXXFLAGS =	-g -Wall -I. -I$(INCLIB)
+MAIN = 	noteTracker
+all:	$(MAIN)
+
+.cpp.o:
+	$(CXX) $(CFLAGS) -c $<
+
+$(MAIN): $(OBJS) $(LIBS)
+	$(CXX) $(INCLUDES) -o $(MAIN) $(OBJS) $(LIBS)
+
+$(OBJS): 
+
+
+.PHONY: depend clean
+
+
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $<  -o $@
+			
+clean:
+	$(RM) *.o *~ $(MAIN)
+
