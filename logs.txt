@@ -1,8 +1,147 @@
-2013-12-27.00:19:22	DEBUG:	Booting up the interface
-2013-12-27.00:19:22	DEBUG:	printing menu
-2013-12-27.00:19:22	DEBUG:	getting menu input
-2013-12-27.00:19:24	DEBUG:	input=3. Calling exitInt()
-2013-12-27.00:19:24	DEBUG:	exiting Interface
-2013-12-27.02:06:36	DEBUG:	Booting up the interface
-2013-12-27.02:06:36	DEBUG:	printing menu
-2013-12-27.02:06:36	DEBUG:	getting menu input
+2013-12-28.15:18:29	DEBUG:	Booting up the interface
+2013-12-28.15:18:29	DEBUG:	printing menu
+2013-12-28.15:18:29	DEBUG:	getting menu input
+2013-12-28.15:18:31	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:18:31	DEBUG:	Accessing db
+2013-12-28.15:20:17	DEBUG:	Booting up the interface
+2013-12-28.15:20:17	DEBUG:	printing menu
+2013-12-28.15:20:17	DEBUG:	getting menu input
+2013-12-28.15:20:17	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:20:17	DEBUG:	Accessing db
+2013-12-28.15:20:34	DEBUG:	Booting up the interface
+2013-12-28.15:20:34	DEBUG:	printing menu
+2013-12-28.15:20:34	DEBUG:	getting menu input
+2013-12-28.15:20:35	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:20:35	DEBUG:	Accessing db
+2013-12-28.15:20:35	DEBUG:	Starting loop to print contents of db
+2013-12-28.15:20:35	DEBUG:	Ending loop to print contents of db
+2013-12-28.15:20:35	DEBUG:	Getting input for accessing db
+2013-12-28.15:20:40	DEBUG:	printing menu
+2013-12-28.15:20:40	DEBUG:	getting menu input
+2013-12-28.15:21:17	DEBUG:	Booting up the interface
+2013-12-28.15:21:17	DEBUG:	printing menu
+2013-12-28.15:21:17	DEBUG:	getting menu input
+2013-12-28.15:21:18	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:21:18	DEBUG:	Accessing db
+2013-12-28.15:21:18	DEBUG:	Starting loop to print contents of db
+2013-12-28.15:21:18	DEBUG:	Ending loop to print contents of db
+2013-12-28.15:21:18	DEBUG:	Getting input for accessing db
+2013-12-28.15:23:54	DEBUG:	Booting up the interface
+2013-12-28.15:23:54	DEBUG:	printing menu
+2013-12-28.15:23:54	DEBUG:	getting menu input
+2013-12-28.15:23:54	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:23:54	DEBUG:	Accessing db
+2013-12-28.15:23:54	DEBUG:	Starting loop to print contents of db
+2013-12-28.15:23:54	DEBUG:	Ending loop to print contents of db
+2013-12-28.15:23:54	DEBUG:	Getting input for accessing db
+2013-12-28.15:24:19	DEBUG:	Booting up the interface
+2013-12-28.15:24:19	DEBUG:	printing menu
+2013-12-28.15:24:19	DEBUG:	getting menu input
+2013-12-28.15:24:19	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:24:19	DEBUG:	Accessing db
+2013-12-28.15:24:19	DEBUG:	Starting loop to print contents of db
+2013-12-28.15:24:19	DEBUG:	Ending loop to print contents of db
+2013-12-28.15:24:19	DEBUG:	Getting input for accessing db
+2013-12-28.15:25:37	DEBUG:	Booting up the interface
+2013-12-28.15:25:37	DEBUG:	printing menu
+2013-12-28.15:25:37	DEBUG:	getting menu input
+2013-12-28.15:25:38	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:25:38	DEBUG:	Accessing db
+2013-12-28.15:25:38	ERROR:	Error with sqlite3 query: SELECT * FROM tbl1
+2013-12-28.15:25:38	DEBUG:	printing menu
+2013-12-28.15:25:38	DEBUG:	getting menu input
+2013-12-28.15:26:27	DEBUG:	Booting up the interface
+2013-12-28.15:26:27	DEBUG:	printing menu
+2013-12-28.15:26:27	DEBUG:	getting menu input
+2013-12-28.15:26:28	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:26:28	DEBUG:	Accessing db
+2013-12-28.15:26:28	ERROR:	Error with sqlite3 query: SELECT * FROM tbl1
+2013-12-28.15:26:28	DEBUG:	printing menu
+2013-12-28.15:26:28	DEBUG:	getting menu input
+2013-12-28.15:28:11	DEBUG:	Booting up the interface
+2013-12-28.15:28:11	DEBUG:	printing menu
+2013-12-28.15:28:11	DEBUG:	getting menu input
+2013-12-28.15:28:13	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:28:13	DEBUG:	Accessing db
+2013-12-28.15:28:13	DEBUG:	Starting loop to print contents of db
+2013-12-28.15:28:13	DEBUG:	Ending loop to print contents of db
+2013-12-28.15:28:13	DEBUG:	Getting input for accessing db
+2013-12-28.15:29:25	DEBUG:	Booting up the interface
+2013-12-28.15:29:25	DEBUG:	printing menu
+2013-12-28.15:29:25	DEBUG:	getting menu input
+2013-12-28.15:29:26	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:29:26	DEBUG:	Accessing db
+2013-12-28.15:29:26	DEBUG:	Starting loop to print contents of db
+2013-12-28.15:29:26	DEBUG:	Ending loop to print contents of db
+2013-12-28.15:29:26	DEBUG:	Getting input for accessing db
+2013-12-28.15:32:22	DEBUG:	Booting up the interface
+2013-12-28.15:32:22	DEBUG:	printing menu
+2013-12-28.15:32:22	DEBUG:	getting menu input
+2013-12-28.15:32:24	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:32:24	DEBUG:	Accessing db
+2013-12-28.15:32:24	DEBUG:	Starting loop to print contents of db
+2013-12-28.15:32:24	DEBUG:	Ending loop to print contents of db
+2013-12-28.15:32:24	DEBUG:	Getting input for accessing db
+2013-12-28.15:32:27	DEBUG:	printing menu
+2013-12-28.15:32:27	DEBUG:	getting menu input
+2013-12-28.15:32:28	ERROR:	invalid input. retrying to get menu input
+2013-12-28.15:32:28	DEBUG:	printing menu
+2013-12-28.15:32:28	DEBUG:	getting menu input
+2013-12-28.15:32:31	DEBUG:	input=3. Calling exitInt()
+2013-12-28.15:32:31	DEBUG:	exiting Interface
+2013-12-28.15:37:59	DEBUG:	Booting up the interface
+2013-12-28.15:37:59	DEBUG:	printing menu
+2013-12-28.15:37:59	DEBUG:	getting menu input
+2013-12-28.15:38:01	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.15:38:01	DEBUG:	Accessing db
+2013-12-28.15:38:01	DEBUG:	Starting loop to print contents of db
+2013-12-28.15:38:01	DEBUG:	Ending loop to print contents of db
+2013-12-28.15:38:01	DEBUG:	Getting input for accessing db
+2013-12-28.15:38:02	DEBUG:	Valid input: 
+2013-12-28.15:38:12	DEBUG:	About to edit folder/note1.txt
+2013-12-28.21:03:02	DEBUG:	Booting up the interface
+2013-12-28.21:03:02	DEBUG:	printing menu
+2013-12-28.21:03:02	DEBUG:	Getting menu input
+2013-12-28.21:03:03	DEBUG:	input=1. Calling gotoDB()
+2013-12-28.21:03:03	DEBUG:	Accessing db
+2013-12-28.21:03:03	DEBUG:	Starting loop to print contents of db
+2013-12-28.21:03:03	DEBUG:	Ending loop to print contents of db
+2013-12-28.21:03:03	DEBUG:	Getting input. User picks path from db
+2013-12-28.21:03:06	DEBUG:	Valid input: 
+2013-12-28.21:03:06	DEBUG:	About to open folder/note1.txt
+2013-12-28.21:03:06	DEBUG:	Checking if file exists
+2013-12-28.21:03:06	DEBUG:	Opening fileMenu for folder/note1.txt
+2013-12-28.21:03:23	DEBUG:	Booting up the interface
+2013-12-28.21:03:23	DEBUG:	printing menu
+2013-12-28.21:03:23	DEBUG:	Getting menu input
+2013-12-28.21:03:25	DEBUG:	input=2. Calling newFile()
+2013-12-28.21:03:25	DEBUG:	Asking for new path for file
+2013-12-28.21:03:29	DEBUG:	Updating database
+2013-12-28.21:03:29	DEBUG:	Finished updating database
+2013-12-28.21:03:29	DEBUG:	finished adding file to db. Going to fileMenu for path
+2013-12-28.21:03:29	DEBUG:	Checking if file exists
+2013-12-28.21:03:29	DEBUG:	Opening fileMenu for newhere.txt
+2013-12-28.21:03:31	DEBUG:	About to read newhere.txt
+2013-12-28.21:03:31	DEBUG:	Finished reading
+2013-12-28.21:03:31	DEBUG:	Checking if file exists
+2013-12-28.21:03:31	DEBUG:	Opening fileMenu for newhere.txt
+2013-12-28.21:03:33	DEBUG:	About to edit newhere.txt
+2013-12-28.21:03:36	DEBUG:	Finished editing
+2013-12-28.21:03:36	DEBUG:	Checking if file exists
+2013-12-28.21:03:36	DEBUG:	Opening fileMenu for newhere.txt
+2013-12-28.21:03:38	DEBUG:	About to read newhere.txt
+2013-12-28.21:03:38	DEBUG:	Finished reading
+2013-12-28.21:03:38	DEBUG:	Checking if file exists
+2013-12-28.21:03:38	DEBUG:	Opening fileMenu for newhere.txt
+2013-12-28.21:03:40	DEBUG:	About to edit newhere.txt
+2013-12-28.21:03:43	DEBUG:	Finished editing
+2013-12-28.21:03:43	DEBUG:	Checking if file exists
+2013-12-28.21:03:43	DEBUG:	Opening fileMenu for newhere.txt
+2013-12-28.21:03:45	DEBUG:	About to read newhere.txt
+2013-12-28.21:03:45	DEBUG:	Finished reading
+2013-12-28.21:03:45	DEBUG:	Checking if file exists
+2013-12-28.21:03:45	DEBUG:	Opening fileMenu for newhere.txt
+2013-12-28.21:03:55	DEBUG:	printing menu
+2013-12-28.21:03:55	DEBUG:	Getting menu input
+2013-12-28.21:03:57	DEBUG:	input=3. Calling exitInt()
+2013-12-28.21:03:57	DEBUG:	exiting Interface

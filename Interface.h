@@ -1,7 +1,9 @@
 #include "Note.h"
 #include "Logger.h"
+#include "Database.h"
 #include <iostream>
 #include <vector>
+#include <iterator>
 #include <stdlib.h>
 #include <string.h>
 #include <fstream>
@@ -20,14 +22,13 @@ public:
     void exitInt();
 	void fileMenu(Note *file);
 	void newFile();
-
+	void addtoDB(Note *file);
 	void practLogs();
 private:
 	Logger log;
-    Note db;
+	Database db;
 	void fileEdit(Note *file);
 	void fileRead(Note *file);
 	void fileEncrypt(Note *file);
-	void addtoDB(string path);
 };
 

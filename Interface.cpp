@@ -32,7 +32,7 @@ void Interface::printMenu() {
         string input;
 		cout << "?";
 		try {
-			log.writeDebug("getting menu input");
+			log.writeDebug("Getting menu input");
         	getline(cin, input);
 			if (input == "1") {
 				log.writeDebug("input=1. Calling gotoDB()");
@@ -47,7 +47,7 @@ void Interface::printMenu() {
 				exitInt();
                 run = false;
 			} else {
-				log.writeError("invalid input. retrying to get menu input");
+				log.writeError("Invalid input: " + input);
                 cout << endl;
                 cout << "----- Invalid input. Try again" << endl;
 			}
@@ -60,33 +60,56 @@ void Interface::printMenu() {
 }
 
 void Interface::gotoDB() {
+	// This is the main interface for interacting with db.
+	// gotoDB() prints a menu, then asks the user which file they want to access
+	// then openFile(file) is called with the selected path.
 	log.writeDebug("Accessing db");
 	bool run = true;
 	int counter = 0;
 	int inp = -1;
-	vector<string> dbText = db.read();
+	string query = "SELECT * FROM TextFiles";
+	vector<vector<string> > dbContents = db.query(query);
+	if (dbContents[0][0].find(query) != std::string::npos) {
+		log.writeError("Error with sqlite3 query: " + query);
+		cout << endl << "Database access error. Returning to main menu." << endl;;
+		printMenu();
+		return;
+	}
 	log.writeDebug("Starting loop to print contents of db");
-	for (vector<string>::iterator it = dbText.begin(); it != dbText.end(); it++) {
-		unsigned pos = it->find(";");
-		cout << counter << ": " << it->substr(0, pos) << endl;
+	vector<vector<string> >::iterator itvvs;	
+	vector<string>::iterator it;
+	for (itvvs = dbContents.begin(); itvvs != dbContents.end(); itvvs++) {
+		cout << counter << ": ";
+		for (it = itvvs->begin(); it != itvvs->end(); it++) {
+			cout << (*it) << "\t";
+		}
 		counter++;
+		cout << endl;
 	}
 	log.writeDebug("Ending loop to print contents of db");
 
 	string input;
 	while(run) {
-		log.writeDebug("Getting input for accessing db");
+		log.writeDebug("Getting input. User picks path from db");
 		cout << "Pick a file to access or type menu to go to the main menu." << endl;
 		cout << "?";
 		getline(cin, input);
 		try {
 			if (input == "menu") {
+				log.writeDebug("Valid input: menu");
 				printMenu();
 			}
 			inp = atoi(input.c_str());
+			// if input is valid:
 			if ((inp > -1) && (inp < (counter+1))) {
-				unsigned pos = dbText[inp].find(";");
-				openFile(dbText[inp].substr(0, pos));
+				log.writeDebug("Valid input: " + inp);
+				//open file
+				//FIXING THIS
+				log.writeDebug("About to open " + dbContents[inp][1]);
+				openFile(dbContents[inp][1]);
+			}
+			else {
+				log.writeError("Invalid input: " + inp);
 			}
 			run = false;
 		} catch(exception &e) {
@@ -98,10 +121,13 @@ void Interface::gotoDB() {
 void Interface::openFile(string path) {
 	Note * file = new Note(path);
 	fileMenu(file);
-//	updateDB(file, 
+	addtoDB(file);
 }
 
 void Interface::fileMenu(Note *file) {
+	log.writeDebug("Checking if file exists"); 
+	// FIX THIS: SHOULD CHECK IF FILE EXISTS ALREADY. IF DOESN'T ASK THE USER IF THEY WANT TO CREATE IT
+	log.writeDebug("Opening fileMenu for " + file->getPath());
 	bool run = true;
 	string input;
 	while(run) {
@@ -153,9 +179,10 @@ void Interface::newFile() {
 		else break;
 	}
 	// add to database
-	addtoDB(path);
+	//FIX HERE
 	// Create a new note with this path
 	Note *file = new Note(path);
+	addtoDB(file);
 	// Now work with this path. 
 	log.writeDebug("finished adding file to db. Going to fileMenu for path");
 	fileMenu(file);
@@ -203,11 +230,13 @@ void Interface::exitInt() {
 	cout << endl << endl;
 }
 
-void Interface::addtoDB(string path) {
-	// change this to generate the absolute path. Can use system("pwd") to get path of program.
-	log.writeDebug("adding path to db " + path);
-	string str = path + ";";
-	db.addToEnd(str);
-	log.writeDebug("Finished adding to db");
+void Interface::addtoDB(Note *file) {
+	log.writeDebug("Updating database");
+	string path = file->getPath();
+	string name = "note10"; // file->getPath();
+	// I think that this isn't secure, but I don't care. 
+	string query = "INSERT INTO TextFiles (Name, Path, Date) VALUES(" + name + "," + path + "," + db.getCurrentDateTime() + ");";
+	//db.query(query);
+	log.writeDebug("Finished updating database");
+	return;
 }
-

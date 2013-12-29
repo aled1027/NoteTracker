@@ -7,7 +7,7 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 
-	Interface *i = new Interface("db.txt");
+	Interface *i = new Interface("sqldb.db");
 	i->printMenu();
 	return 0;
 
