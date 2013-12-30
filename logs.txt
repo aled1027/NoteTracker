@@ -20,3 +20,87 @@
 2013-12-29.13:15:01	DEBUG:	Getting menu input
 2013-12-29.13:15:02	DEBUG:	input=3. Calling exitInt()
 2013-12-29.13:15:02	DEBUG:	exiting Interface
+2013-12-29.19:23:28	DEBUG:	Booting up the interface
+2013-12-29.19:23:28	DEBUG:	printing menu
+2013-12-29.19:23:28	DEBUG:	Getting menu input
+2013-12-29.19:23:31	DEBUG:	input=1. Calling gotoDB()
+2013-12-29.19:23:31	DEBUG:	Accessing db
+2013-12-29.19:23:31	DEBUG:	Starting loop to print contents of db
+2013-12-29.19:23:31	DEBUG:	Ending loop to print contents of db
+2013-12-29.19:23:31	DEBUG:	Getting input. User picks path from db
+2013-12-29.19:23:33	DEBUG:	Valid input: 
+2013-12-29.19:23:33	DEBUG:	About to open newhere.txt
+2013-12-29.19:23:33	DEBUG:	Checking if file exists
+2013-12-29.19:23:33	DEBUG:	Opening fileMenu for newhere.txt
+2013-12-29.19:23:35	DEBUG:	printing menu
+2013-12-29.19:23:35	DEBUG:	Getting menu input
+2013-12-29.19:23:36	DEBUG:	input=3. Calling exitInt()
+2013-12-29.19:23:36	DEBUG:	exiting Interface
+2013-12-29.19:26:17	DEBUG:	Booting up the interface
+2013-12-29.19:26:17	DEBUG:	printing menu
+2013-12-29.19:26:17	DEBUG:	Getting menu input
+2013-12-29.19:26:18	DEBUG:	input=2. Calling newFile()
+2013-12-29.19:26:18	DEBUG:	Asking for new path for file
+2013-12-29.19:26:24	DEBUG:	Adding to database
+2013-12-29.19:26:24	DEBUG:	Finished adding to database
+2013-12-29.19:26:24	DEBUG:	finished adding file to db. Going to fileMenu for path
+2013-12-29.19:26:24	DEBUG:	Checking if file exists
+2013-12-29.19:26:24	DEBUG:	Opening fileMenu for readme.txt
+2013-12-29.19:26:26	DEBUG:	About to read readme.txt
+2013-12-29.19:26:26	DEBUG:	Finished reading
+2013-12-29.19:26:26	DEBUG:	Checking if file exists
+2013-12-29.19:26:26	DEBUG:	Opening fileMenu for readme.txt
+2013-12-29.19:26:30	DEBUG:	printing menu
+2013-12-29.19:26:30	DEBUG:	Getting menu input
+2013-12-29.19:26:31	DEBUG:	input=3. Calling exitInt()
+2013-12-29.19:26:31	DEBUG:	exiting Interface
+2013-12-29.19:26:48	DEBUG:	Booting up the interface
+2013-12-29.19:26:48	DEBUG:	printing menu
+2013-12-29.19:26:48	DEBUG:	Getting menu input
+2013-12-29.19:26:59	DEBUG:	input=1. Calling gotoDB()
+2013-12-29.19:26:59	DEBUG:	Accessing db
+2013-12-29.19:26:59	DEBUG:	Starting loop to print contents of db
+2013-12-29.19:26:59	DEBUG:	Ending loop to print contents of db
+2013-12-29.19:26:59	DEBUG:	Getting input. User picks path from db
+2013-12-29.19:27:01	DEBUG:	Valid input: 
+2013-12-29.19:27:01	DEBUG:	About to open newhere.txt
+2013-12-29.19:27:01	DEBUG:	Checking if file exists
+2013-12-29.19:27:01	DEBUG:	Opening fileMenu for newhere.txt
+2013-12-29.19:27:04	DEBUG:	About to edit newhere.txt
+2013-12-29.19:27:08	DEBUG:	Finished editing
+2013-12-29.19:27:08	DEBUG:	Checking if file exists
+2013-12-29.19:27:08	DEBUG:	Opening fileMenu for newhere.txt
+2013-12-29.19:27:17	DEBUG:	printing menu
+2013-12-29.19:27:17	DEBUG:	Getting menu input
+2013-12-29.19:27:18	DEBUG:	input=1. Calling gotoDB()
+2013-12-29.19:27:18	DEBUG:	Accessing db
+2013-12-29.19:27:18	DEBUG:	Starting loop to print contents of db
+2013-12-29.19:27:18	DEBUG:	Ending loop to print contents of db
+2013-12-29.19:27:18	DEBUG:	Getting input. User picks path from db
+2013-12-29.19:27:19	DEBUG:	alid input: 
+2013-12-29.19:27:19	DEBUG:	About to open readme.txt
+2013-12-29.19:27:19	DEBUG:	Checking if file exists
+2013-12-29.19:27:19	DEBUG:	Opening fileMenu for readme.txt
+2013-12-29.19:28:15	DEBUG:	Booting up the interface
+2013-12-29.19:28:15	DEBUG:	printing menu
+2013-12-29.19:28:15	DEBUG:	Getting menu input
+2013-12-29.19:28:17	DEBUG:	input=1. Calling gotoDB()
+2013-12-29.19:28:17	DEBUG:	Accessing db
+2013-12-29.19:28:17	DEBUG:	Starting loop to print contents of db
+2013-12-29.19:28:17	DEBUG:	Ending loop to print contents of db
+2013-12-29.19:28:17	DEBUG:	Getting input. User picks path from db
+2013-12-29.19:28:19	DEBUG:	alid input: 
+2013-12-29.19:28:19	DEBUG:	About to open readme.txt
+2013-12-29.19:28:19	DEBUG:	Checking if file exists
+2013-12-29.19:28:19	DEBUG:	Opening fileMenu for readme.txt
+2013-12-29.19:28:22	DEBUG:	About to read readme.txt
+2013-12-29.19:28:22	DEBUG:	Finished reading
+2013-12-29.19:28:22	DEBUG:	Checking if file exists
+2013-12-29.19:28:22	DEBUG:	Opening fileMenu for readme.txt
+2013-12-29.19:28:23	DEBUG:	printing menu
+2013-12-29.19:28:23	DEBUG:	Getting menu input
+2013-12-29.19:28:24	ERROR:	Invalid input: exit
+2013-12-29.19:28:24	DEBUG:	printing menu
+2013-12-29.19:28:24	DEBUG:	Getting menu input
+2013-12-29.19:28:25	DEBUG:	input=3. Calling exitInt()
+2013-12-29.19:28:25	DEBUG:	exiting Interface

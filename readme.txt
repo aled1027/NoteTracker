@@ -1,7 +1,3 @@
-- not exiting correctly...
-- add those macro things to header files
-
-
 NoteTracker is a c++ application for keeping track of *.txt files located in various places on your computer. To add a note, the user enters the path of the text file (either relative or absolute path) and the nickname they want to give the file. A sqlite3 databse stores these for easy use. 
 
 To use:

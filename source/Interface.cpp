@@ -20,7 +20,7 @@ Interface::~Interface() {
 void Interface::printMenu() {
     cout << endl;
     cout << endl;
-    cout << "Welcome to notetaker. Notetaker will encrypt and store your text files in a database." << endl;
+    cout << "Welcome to NoteTracker. NoteTracker will encrypt and store your text files in a database." << endl;
     cout << "How would you like to proceed?" << endl;
     // print menu and figure out what the user wants to do. 
     bool run = true;
@@ -79,8 +79,7 @@ void Interface::gotoDB() {
 	vector<vector<string> >::iterator itvvs;	
 	vector<string>::iterator it;
 	cout << "Name\tPath\tDate" << endl;
-	// to list them in order of newest to older, need to go backwards
-	for (itvvs = dbContents.end()-1; itvvs != dbContents.begin()-1; itvvs--) {
+	for (itvvs = dbContents.begin(); itvvs != dbContents.end(); itvvs++) {
 		cout << counter << ": ";
 		for (it = itvvs->begin(); it != itvvs->end(); it++) {
 			cout << (*it) << "\t";
