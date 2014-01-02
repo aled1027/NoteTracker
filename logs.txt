@@ -104,3 +104,11 @@
 2013-12-29.19:28:24	DEBUG:	Getting menu input
 2013-12-29.19:28:25	DEBUG:	input=3. Calling exitInt()
 2013-12-29.19:28:25	DEBUG:	exiting Interface
+2014-01-02.16:07:19	DEBUG:	Booting up the interface
+2014-01-02.16:07:19	DEBUG:	printing menu
+2014-01-02.16:07:19	DEBUG:	Getting menu input
+2014-01-02.16:07:20	DEBUG:	input=1. Calling gotoDB()
+2014-01-02.16:07:20	DEBUG:	Accessing db
+2014-01-02.16:07:20	DEBUG:	Starting loop to print contents of db
+2014-01-02.16:07:20	DEBUG:	Ending loop to print contents of db
+2014-01-02.16:07:20	DEBUG:	Getting input. User picks path from db

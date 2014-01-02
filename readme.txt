@@ -8,6 +8,7 @@ Known bugs:
 	- If you enter relative paths, then move the exectuable, the program will be unable to fetch the file.
 
 Things to add:
+	- ability to remove notes from database
 	- Work with absolute paths, in case the location of the executable changes. 
 	- Better interface in general. 
 	- A search feature
